@@ -1,0 +1,49 @@
+---
+- !ruby/object:Rubber::Configuration::InstanceItem
+  name: wrula-collector02
+  domain: wrulametrics.com
+  roles:
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: web
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: haproxy
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: app
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: passenger
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: apache
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: collectd
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: monit
+    options: {}
+  instance_id: i-14ff3b44
+  image_type: m1.small
+  image_id: ami-b6089bdf
+  security_groups:
+  - wrula_collector_production_default
+  - wrula_collector_production_web
+  - wrula_collector_production_wrula-collector02
+  - wrula_collector_production_haproxy
+  - wrula_collector_production_app
+  - wrula_collector_production_passenger
+  - wrula_collector_production_apache
+  - wrula_collector_production_collectd
+  - wrula_collector_production_monit
+  external_host: ec2-107-21-88-68.compute-1.amazonaws.com
+  external_ip: 107.21.88.68
+  internal_host: ip-10-2-214-207.ec2.internal
+  internal_ip: 10.2.214.207
+  zone: us-east-1d
+  provider: aws
+  platform: linux
+  root_device_type: instance-store
+- volumes: {}
+  static_ips: {}

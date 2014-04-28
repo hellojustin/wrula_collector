@@ -1,0 +1,5 @@
+require 'minitest'
+require 'minitest/spec'
+require 'minitest/mock'
+require 'minitest/autorun'
+require './config/environment.rb'
