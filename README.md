@@ -10,8 +10,8 @@ code:
 
 What do those attributes mean?
 
-- **async:** Makes loading this script a non-blocking operation. The browser to 
-continue parse and render the page as this script loads. This minimizes the
+- **async:** Makes loading this script a non-blocking operation. The browser will 
+continue to parse and render the page as this script loads. This minimizes the
 impact to page performance.
 - **src:** This points to the script that will actually collect data about the
 page and the browser, and send it off the the WRULA collector.
@@ -24,7 +24,7 @@ to witness the script in action. *Tip:* open your browser console, inspect the D
 watch the network traffic, take a look the cookies, and confirm how unobtrusive
 the JavaScript is.
 
-## Technology
+### Components
 
 The WRULA Collector consists of two components:
 
@@ -34,7 +34,7 @@ receives data from wrula.js and persists it to DynamoDB.
 
 Each of these will be discussed in a little more detail below.
 
-## Development Setup Instructions
+### Development Setup Instructions
 
 Requirements: The WRULA Collector project requires 
 [Ruby 2.0.0 or greater](https://www.ruby-lang.org/en/downloads/), and
@@ -96,10 +96,11 @@ platform's package management system.
      rackup config.ru
    ```
 
-   The WRULA collector can run easily on any application server that supports Rack.
+   The WRULA Collector can run easily on any application server that supports Rack.
+   We recommend [Pow](http://pow.cx).
 
 
-## Provisioning and Deploying to Production
+### Provisioning and Deploying to Production
 
 The WRULA Collector uses the Rubber gem to manage its production infrastructure.
 Rubber is a suite of Capistrano tasks that make it easy to provision and manage
@@ -134,7 +135,7 @@ deploy code to production with:
 ```
 
 
-## Additional notes
+### Additional notes
 
 - The version of jQuery included into wrula.js is actually a custom jQuery build
 that only includes $.ajax(). Soon we'll work this into the Javascript compilation
