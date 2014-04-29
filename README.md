@@ -64,7 +64,7 @@ platform's package management system.
    pattern. To compile it all down to one file, we need to have r.js installed.
 
    ```Shell
-     npm install r.js
+     npm install requirejs
    ```
 
 4. Compile wrula.js
