@@ -1,5 +1,7 @@
 # The WRULA Collector
 
+[![Build Status](https://travis-ci.org/hellojustin/wrula_collector.svg?branch=master)](https://travis-ci.org/hellojustin/wrula_collector)
+
 The WRULA Collector is a very lightweight Rack application that allows website
 owners to instrument their pages with WRULA Metrics using just a single line of
 code:
@@ -10,7 +12,7 @@ code:
 
 What do those attributes mean?
 
-- **async:** Makes loading this script a non-blocking operation. The browser will 
+- **async:** Makes loading this script a non-blocking operation. The browser will
 continue to parse and render the page as this script loads. This minimizes the
 impact to page performance.
 - **src:** This points to the script that will actually collect data about the
@@ -36,7 +38,7 @@ Each of these will be discussed in a little more detail below.
 
 ### Development Setup Instructions
 
-Requirements: The WRULA Collector project requires 
+Requirements: The WRULA Collector project requires
 [Ruby 2.0.0 or greater](https://www.ruby-lang.org/en/downloads/), and
 [NodeJS](http://nodejs.org/download/). It's best to install each using your
 platform's package management system.
@@ -52,7 +54,7 @@ platform's package management system.
 
 2. Install all the gems.
 
-   This project doesn't depend on a boatload of gems, but there are a few. 
+   This project doesn't depend on a boatload of gems, but there are a few.
 
    ```Shell
      bundle install
@@ -77,7 +79,7 @@ platform's package management system.
    ```
 
 5. Run the tests.
-  
+
    The Ruby test harness for the WRULA Collector is built with MiniTest::Spec.
    To run the tests use the following command:
 
@@ -141,8 +143,6 @@ deploy code to production with:
 that only includes $.ajax(). Soon we'll work this into the Javascript compilation
 process.
 
-- Scorched does not provide multi-environment configuration out-of-the-box. So 
+- Scorched does not provide multi-environment configuration out-of-the-box. So
 although you're running the app locally, wrula.js and the AWS gem are pointing at
 production.
-
-
